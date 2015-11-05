@@ -15,9 +15,9 @@ Generate sed:
 
 First produce lowercase-realcase mappings with xslt
 
-$ xmlsh -c 'xslt -f stylesheets/element.xslt -cf schema.z3d' > elementsMap.dat
+$ xmlsh -c 'xslt -f stylesheets/element.xslt -cf x3d-3.3.xsd' > elementsMap.dat
 
-$ xmlsh -c 'xslt -f stylesheets/attribute.xslt -cf schema.z3d' > attributesMap.dat
+$ xmlsh -c 'xslt -f stylesheets/attribute.xslt -cf x3d-3.3.xsd' > attributesMap.dat
 
 Then generate sed by awk scripts:
 
