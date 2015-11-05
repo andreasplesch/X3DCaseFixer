@@ -2,6 +2,9 @@
 
 This repository ontains a couple of scripts to generate a sed script from the X3D xml schema to fix element and attribute case in a (nonconforming) x3d file. The main assumption is that attributes can be identified by a leading space and a trailing '=' character. Always double check the formatted output.
 
+http://www.w3.org/TR/2008/REC-xml-20081126/#sec-starttags
+defines that there may zero or more spaces in front or after the "=" character.
+
 Use
 
 $ sed -f fixX3Dcase.sed input.x3d > output.x3d
