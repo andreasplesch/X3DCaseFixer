@@ -1,6 +1,6 @@
 # X3DCaseFixer
 
-This repository ontains a couple of scripts to generate sed script from the X3D xml schema to fix element and attribute case. The main assumption is that attributes can be identified by a leading space and a trailing '=' character.
+This repository ontains a couple of scripts to generate a sed script from the X3D xml schema to fix element and attribute case in a (nonconforming) x3d file. The main assumption is that attributes can be identified by a leading space and a trailing '=' character. Always double check the formatted output.
 
 Use
 
