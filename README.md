@@ -31,4 +31,10 @@ $ awk -f awk/mksed_ele.awk maps/elementsMap.dat > sed/fixCase.sed
 
 $ awk -f awk/mksed_attr.awk maps/attributesMap.dat >> sed/fixCase.sed
 
+# TODO
 
+Wrap everything into a shell script.
+
+Have xslt generate the sed script directly.
+
+Use xslt to replace element and attribute names rather than sed.
