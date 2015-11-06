@@ -4,7 +4,7 @@ This repository ontains a couple of scripts to generate a sed script from the X3
 Since the script does not chack for script nodes, there is a good chance that variables which have attribute names in assignments will be transformed as well. This is typically NOT wwhat is intended.
 
 http://www.w3.org/TR/2008/REC-xml-20081126/#sec-starttags
-defines that there may zero or more spaces in front or after the "=" character.
+defines that there may be zero or more spaces in front or after the "=" character. This is recognized by the regexp used in the sed script. The output preserves how white space was used.
 
 Use 
 
