@@ -8,7 +8,7 @@ defines that there may be zero or more spaces in front or after the "=" characte
 
 Use 
 
-$ sed -f fixX3Dcase.sed input.x3d > output.x3d
+$ sed -f sed/fixX3Dcase.sed input.x3d > output.x3d
 
 Check by
 
@@ -17,16 +17,18 @@ $ diff input.x3d output.x3d
 
 Generate sed:
 
+Get x3d schema from http://www.web3d.org/specifications/x3d-3.3.xsd.
+
 First produce lowercase-realcase mappings with xslt
 
-$ xmlsh -c 'xslt -f stylesheets/element.xslt -cf x3d-3.3.xsd' > elementsMap.dat
+$ xmlsh -c 'xslt -f stylesheets/element.xslt -cf x3d-3.3.xsd' > maps/elementsMap.dat
 
-$ xmlsh -c 'xslt -f stylesheets/attribute.xslt -cf x3d-3.3.xsd' > attributesMap.dat
+$ xmlsh -c 'xslt -f stylesheets/attribute.xslt -cf x3d-3.3.xsd' > maps/attributesMap.dat
 
 Then generate sed by awk scripts:
 
-$ awk -f awk/mksed_ele.awk elementsMap.dat > fixCase.sed
+$ awk -f awk/mksed_ele.awk maps/elementsMap.dat > sed/fixCase.sed
 
-$ awk -f awk/mksed_attr.awk attributesMap.dat >> fixCase.sed
+$ awk -f awk/mksed_attr.awk maps/attributesMap.dat >> sed/fixCase.sed
 
 
